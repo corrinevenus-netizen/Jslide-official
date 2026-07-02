@@ -1371,14 +1371,6 @@ h3 {
   white-space: nowrap;
 }
 
-.footer-claws {
-  right: -12px;
-  bottom: -22px;
-  width: 170px;
-  height: 210px;
-  opacity: 0.52;
-}
-
 .site-footer {
   position: relative;
   overflow: hidden;
@@ -1668,32 +1660,41 @@ h3 {
   }
 
   .hero {
-    min-height: 790px;
+    min-height: 0;
     padding-top: 92px;
-    padding-bottom: 116px;
+    padding-bottom: 110px;
+    align-items: start;
   }
 
   .hero-player-wrap {
-    inset: 72px 0 auto 0;
-    height: min(54vh, 440px);
-    min-height: 360px;
-    opacity: 0.88;
+    inset: 74px 0 auto 0;
+    height: clamp(270px, 42vh, 330px);
+    min-height: 0;
+    opacity: 0.9;
   }
 
   .hero-player {
-    right: max(8px, 5vw);
+    right: max(12px, 5vw);
     bottom: 0;
     width: auto;
     height: 100%;
-    max-width: min(72vw, 330px);
+    max-width: min(58vw, 250px);
     object-fit: contain;
     object-position: bottom right;
   }
 
   .hero-number {
     right: 10px;
-    bottom: 41%;
+    bottom: 36%;
     font-size: clamp(5.8rem, 25vw, 8rem);
+  }
+
+  .hero-grid {
+    padding-top: clamp(290px, 46vh, 352px);
+  }
+
+  .hero-copy {
+    max-width: 100%;
   }
 
   .player-kicker {
