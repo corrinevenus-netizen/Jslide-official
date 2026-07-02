@@ -392,6 +392,10 @@ h1 {
     drop-shadow(-28px 36px 42px rgba(0, 0, 0, 0.84));
 }
 
+.hero-player-mobile {
+  display: none;
+}
+
 .hero-number {
   position: absolute;
   left: clamp(-86px, -5vw, -42px);
@@ -1667,30 +1671,38 @@ h3 {
   }
 
   .hero-player-wrap {
-    inset: 74px 0 auto 0;
-    height: clamp(270px, 42vh, 330px);
+    inset: 76px 0 auto;
+    height: clamp(285px, 44vh, 360px);
     min-height: 0;
-    opacity: 0.9;
+    opacity: 1;
   }
 
   .hero-player {
-    right: max(12px, 5vw);
-    bottom: 0;
-    width: auto;
+    display: none;
+  }
+
+  .hero-player-mobile {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    display: block;
+    width: min(92vw, 410px);
     height: 100%;
-    max-width: min(58vw, 250px);
+    max-width: none;
     object-fit: contain;
-    object-position: bottom right;
+    object-position: center;
+    transform: translateX(50%);
+    filter:
+      drop-shadow(0 0 20px rgba(18, 238, 236, 0.18))
+      drop-shadow(0 28px 38px rgba(0, 0, 0, 0.72));
   }
 
   .hero-number {
-    right: 10px;
-    bottom: 36%;
-    font-size: clamp(5.8rem, 25vw, 8rem);
+    display: none;
   }
 
   .hero-grid {
-    padding-top: clamp(290px, 46vh, 352px);
+    padding-top: clamp(318px, 49vh, 400px);
   }
 
   .hero-copy {
