@@ -1678,23 +1678,27 @@ h3 {
   }
 
   .hero-player {
-    display: none;
+    right: -6px;
+    bottom: 76px;
+    display: block;
+    width: min(44vw, 220px);
+    max-height: 56%;
+    object-position: bottom right;
   }
 
   .hero-player-mobile {
+    display: none;
+  }
+
+  .hero-player-wrap::after {
     position: absolute;
-    top: 100px;
-    right: 0;
-    display: block;
-    width: min(54vw, 238px);
-    height: auto;
-    max-width: none;
-    max-height: 360px;
-    object-fit: contain;
-    object-position: right top;
-    filter:
-      drop-shadow(0 0 20px rgba(18, 238, 236, 0.18))
-      drop-shadow(0 28px 38px rgba(0, 0, 0, 0.72));
+    right: 2px;
+    bottom: 70px;
+    width: min(42vw, 210px);
+    height: 24px;
+    content: "";
+    background: radial-gradient(ellipse, rgba(18, 238, 236, 0.28), rgba(0, 0, 0, 0.5) 58%, transparent 72%);
+    filter: blur(3px);
   }
 
   .hero-number {
