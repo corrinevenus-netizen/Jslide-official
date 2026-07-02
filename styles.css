@@ -1664,15 +1664,15 @@ h3 {
   }
 
   .hero {
-    min-height: 0;
+    min-height: 660px;
     padding-top: 92px;
-    padding-bottom: 110px;
-    align-items: start;
+    padding-bottom: 94px;
+    align-items: center;
   }
 
   .hero-player-wrap {
-    inset: 76px 0 auto;
-    height: clamp(285px, 44vh, 360px);
+    inset: 0;
+    height: 100%;
     min-height: 0;
     opacity: 1;
   }
@@ -1683,15 +1683,15 @@ h3 {
 
   .hero-player-mobile {
     position: absolute;
-    top: 0;
-    right: 50%;
+    top: 100px;
+    right: 0;
     display: block;
-    width: min(92vw, 410px);
-    height: 100%;
+    width: min(54vw, 238px);
+    height: auto;
     max-width: none;
+    max-height: 360px;
     object-fit: contain;
-    object-position: center;
-    transform: translateX(50%);
+    object-position: right top;
     filter:
       drop-shadow(0 0 20px rgba(18, 238, 236, 0.18))
       drop-shadow(0 28px 38px rgba(0, 0, 0, 0.72));
@@ -1702,29 +1702,53 @@ h3 {
   }
 
   .hero-grid {
-    padding-top: clamp(318px, 49vh, 400px);
+    padding-top: 0;
   }
 
   .hero-copy {
-    max-width: 100%;
+    max-width: min(45vw, 180px);
   }
 
   .player-kicker {
+    max-width: 100%;
+    font-size: clamp(1.05rem, 5.4vw, 1.55rem);
     letter-spacing: 0.14em;
   }
 
   h1 {
-    font-size: clamp(3.25rem, 17vw, 4.65rem);
-    margin-left: 0.35rem;
+    font-size: clamp(2.2rem, 11.5vw, 3.15rem);
+    margin-left: 0;
+    transform: none;
+  }
+
+  .hero-meta strong {
+    font-size: clamp(1rem, 4.8vw, 1.25rem);
+  }
+
+  .hero-meta span {
+    max-width: 158px;
+    font-size: 0.76rem;
   }
 
   .hero-quote {
-    max-width: 290px;
-    font-size: 0.92rem;
+    max-width: 185px;
+    font-size: 0.76rem;
   }
 
   .hero-signature {
-    margin-left: 86px;
+    margin-left: 24px;
+    font-size: 1.65rem;
+  }
+
+  .hero-actions {
+    max-width: 210px;
+    gap: 10px;
+  }
+
+  .button {
+    min-height: 44px;
+    padding: 12px 14px;
+    font-size: 0.68rem;
   }
 
   .quick-stats {
