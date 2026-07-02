@@ -1668,18 +1668,32 @@ h3 {
   }
 
   .hero {
-    min-height: 735px;
-    padding-top: 96px;
+    min-height: 790px;
+    padding-top: 92px;
+    padding-bottom: 116px;
   }
 
   .hero-player-wrap {
-    inset: 68px -45vw 0 -6vw;
+    inset: 72px 0 auto 0;
+    height: min(54vh, 440px);
+    min-height: 360px;
+    opacity: 0.88;
   }
 
   .hero-player {
-    right: -46px;
-    width: 138vw;
-    max-height: 86%;
+    right: max(8px, 5vw);
+    bottom: 0;
+    width: auto;
+    height: 100%;
+    max-width: min(72vw, 330px);
+    object-fit: contain;
+    object-position: bottom right;
+  }
+
+  .hero-number {
+    right: 10px;
+    bottom: 41%;
+    font-size: clamp(5.8rem, 25vw, 8rem);
   }
 
   .player-kicker {
