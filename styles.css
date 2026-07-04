@@ -1295,6 +1295,14 @@ h3 {
   object-position: center 28%;
 }
 
+.gallery-card:nth-child(7) img {
+  object-position: center 24%;
+}
+
+.gallery-card:nth-child(8) img {
+  object-position: center 42%;
+}
+
 .gallery-card:hover img {
   transform: scale(1.07);
 }

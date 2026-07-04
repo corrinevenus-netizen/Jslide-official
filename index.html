@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preload" as="image" href="assets/jslide-hero-bg.png" fetchpriority="high">
     <title>JSlide | Jace Garcia Athlete Profile</title>
-    <link rel="stylesheet" href="styles.css?v=video-highlights-1">
+    <link rel="stylesheet" href="styles.css?v=age7-highlights-1">
   </head>
   <body>
     <header class="site-header" data-header>
@@ -185,12 +185,14 @@
               <video
                 class="featured-video"
                 controls
+                muted
+                data-lock-muted
                 preload="metadata"
                 playsinline
-                poster="assets/video-posters/jslide-over-years.jpg"
-                aria-label="Jace Garcia football highlights over the years"
+                poster="assets/jslide-age7-lineup.jpg"
+                aria-label="Jace Garcia featured highlight reel, muted"
               >
-                <source src="assets/videos/jslide-over-years.m4v" type="video/mp4">
+                <source src="assets/videos/jslide-featured-reel.mov">
                 Your browser does not support this highlight video.
               </video>
               <div class="video-badge">Featured Reel</div>
@@ -277,6 +279,16 @@
               <div class="video-card-copy">
                 <span>Age 6</span>
                 <strong>Highlight Clip 04</strong>
+              </div>
+            </article>
+            <article class="video-card reveal">
+              <video controls preload="metadata" playsinline poster="assets/jslide-age7-lineup.jpg" aria-label="Play Jace Garcia age 7 highlight clip 5">
+                <source src="assets/videos/jslide-age-7-highlight.mov">
+                Your browser does not support this highlight video.
+              </video>
+              <div class="video-card-copy">
+                <span>Age 7</span>
+                <strong>Highlight Clip 05</strong>
               </div>
             </article>
             <article class="video-card reveal">
@@ -428,6 +440,28 @@
               >
               <figcaption>QB Ready</figcaption>
             </figure>
+            <figure class="gallery-card reveal">
+              <img
+                src="assets/jslide-age7-sideline.jpg"
+                width="828"
+                height="1402"
+                loading="lazy"
+                decoding="async"
+                alt="Jace Garcia in black uniform standing on the sideline"
+              >
+              <figcaption>Age 7 Sideline</figcaption>
+            </figure>
+            <figure class="gallery-card reveal">
+              <img
+                src="assets/jslide-age7-lineup.jpg"
+                width="828"
+                height="1234"
+                loading="lazy"
+                decoding="async"
+                alt="Jace Garcia lined up with his team before a football snap"
+              >
+              <figcaption>In Formation</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -480,6 +514,6 @@
     </footer>
 
     <div class="toast" role="status" aria-live="polite" data-toast></div>
-    <script src="script.js?v=story-1"></script>
+    <script src="script.js?v=featured-muted-1"></script>
   </body>
 </html>

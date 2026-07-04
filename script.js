@@ -3,6 +3,7 @@ const statValues = document.querySelectorAll("[data-count]");
 const revealItems = document.querySelectorAll(".reveal");
 const playButton = document.querySelector(".play-button");
 const scheduleButton = document.querySelector(".schedule-button");
+const lockedMutedVideos = document.querySelectorAll("[data-lock-muted]");
 const toast = document.querySelector("[data-toast]");
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -87,6 +88,12 @@ updateHeader();
 
 revealItems.forEach((item) => revealObserver.observe(item));
 statValues.forEach((item) => statObserver.observe(item));
+lockedMutedVideos.forEach((video) => {
+  video.muted = true;
+  video.addEventListener("volumechange", () => {
+    if (!video.muted) video.muted = true;
+  });
+});
 
 if (playButton) {
   playButton.addEventListener("click", () => {
