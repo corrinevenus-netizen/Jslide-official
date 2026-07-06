@@ -69,7 +69,7 @@ function finishIntro() {
   window.clearTimeout(introTimeout);
   window.setTimeout(() => {
     intro.remove();
-  }, reducedMotion ? 40 : 460);
+  }, reducedMotion ? 40 : 1250);
 }
 
 const revealObserver = new IntersectionObserver(
@@ -100,7 +100,7 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
 
 if (intro) {
-  introTimeout = window.setTimeout(finishIntro, reducedMotion ? 700 : 7400);
+  introTimeout = window.setTimeout(finishIntro, reducedMotion ? 700 : 7800);
 }
 
 if (introSkip) {

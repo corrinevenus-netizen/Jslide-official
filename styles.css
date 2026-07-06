@@ -105,11 +105,16 @@ body::after {
   color: var(--white);
   background: #020404;
   isolation: isolate;
-  animation: intro-exit 7.4s ease forwards;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1200ms ease, filter 1200ms ease, visibility 0s linear 1200ms;
 }
 
 .intro-overlay.is-done {
-  animation: intro-fast-exit 420ms ease forwards;
+  opacity: 0;
+  filter: blur(8px);
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .intro-stadium {
@@ -313,25 +318,6 @@ body::after {
   100% {
     opacity: 1;
     transform: scale(1) rotate(-3deg);
-  }
-}
-
-@keyframes intro-exit {
-  0%,
-  88% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes intro-fast-exit {
-  to {
-    opacity: 0;
-    visibility: hidden;
   }
 }
 
