@@ -100,7 +100,7 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
 
 if (intro) {
-  introTimeout = window.setTimeout(finishIntro, reducedMotion ? 700 : 5350);
+  introTimeout = window.setTimeout(finishIntro, reducedMotion ? 700 : 7400);
 }
 
 if (introSkip) {
