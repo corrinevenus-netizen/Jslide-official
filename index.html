@@ -19,9 +19,26 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preload" as="image" href="assets/jslide-hero-bg.png" fetchpriority="high">
     <title>JSlide | Jace Garcia Athlete Profile</title>
-    <link rel="stylesheet" href="styles.css?v=age7-highlights-1">
+    <link rel="stylesheet" href="styles.css?v=intro-sequence-1">
   </head>
   <body>
+    <div class="intro-overlay" data-intro aria-label="JSlide entrance intro">
+      <div class="intro-stadium" aria-hidden="true"></div>
+      <div class="intro-lights" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="intro-smoke" aria-hidden="true"></div>
+      <div class="intro-crowd" aria-hidden="true"></div>
+      <div class="intro-copy">
+        <span>Now Entering...</span>
+        <strong>JSlide</strong>
+        <em>Boom.</em>
+      </div>
+      <button class="intro-skip" type="button" data-intro-skip>Skip</button>
+    </div>
+
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="JSlide athlete profile home">
         <span class="brand-script">JSlide</span>
@@ -534,6 +551,6 @@
     </footer>
 
     <div class="toast" role="status" aria-live="polite" data-toast></div>
-    <script src="script.js?v=featured-muted-1"></script>
+    <script src="script.js?v=intro-sequence-1"></script>
   </body>
 </html>

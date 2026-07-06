@@ -4,9 +4,12 @@ const revealItems = document.querySelectorAll(".reveal");
 const playButton = document.querySelector(".play-button");
 const scheduleButton = document.querySelector(".schedule-button");
 const lockedMutedVideos = document.querySelectorAll("[data-lock-muted]");
+const intro = document.querySelector("[data-intro]");
+const introSkip = document.querySelector("[data-intro-skip]");
 const toast = document.querySelector("[data-toast]");
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let introTimeout;
 
 function updateHeader() {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -59,6 +62,16 @@ function showToast(message) {
   }, 2600);
 }
 
+function finishIntro() {
+  if (!intro || intro.classList.contains("is-done")) return;
+
+  intro.classList.add("is-done");
+  window.clearTimeout(introTimeout);
+  window.setTimeout(() => {
+    intro.remove();
+  }, reducedMotion ? 40 : 460);
+}
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -85,6 +98,14 @@ const statObserver = new IntersectionObserver(
 
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
+
+if (intro) {
+  introTimeout = window.setTimeout(finishIntro, reducedMotion ? 700 : 5350);
+}
+
+if (introSkip) {
+  introSkip.addEventListener("click", finishIntro);
+}
 
 revealItems.forEach((item) => revealObserver.observe(item));
 statValues.forEach((item) => statObserver.observe(item));
